@@ -48,5 +48,13 @@ public class ArtistController {
 	return artistService.getArtistById(artistId);
 	}
 	
+	@RequestMapping(value ="/detail/coutry",method=RequestMethod.GET)
+	public ArtistDto getArtistDetailbycountry(@RequestParam(value="id") Long artistId,
+			@RequestParam(value="country",required=true) String country) {
+	System.out.println("country :" + country + " id " + artistId);
+	return artistService.getArtistById(artistId);
+	}
+	
+	
 
 }
